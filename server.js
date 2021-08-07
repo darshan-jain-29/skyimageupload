@@ -37,8 +37,8 @@ app.listen(3001, () => {
 app.post("/upload_files", upload.array("files"), uploadFiles);
 
 function uploadFiles(req, res) {
-    console.log(req.body);
-    console.log(req.files);
+    // console.log(req.body);
+    // console.log(req.files);
 
     return res.json({ status: 'OK', uploaded: req.files.length, fileName: req.files[0].key });
 }
